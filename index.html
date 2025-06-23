@@ -105,6 +105,22 @@
         padding: 20px;
       }
     }
+
+    .web-only {
+        display: inline; /* or whatever display you want on desktop */
+    }
+    .mobile-only{
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .web-only {
+            display: none;
+        }
+        .mobile-only{
+            display: inline;
+        }
+    }
   </style>
 </head>
 <body>
@@ -116,10 +132,19 @@
     <p>Our website is coming soon! We're getting things ready for your little stars.</p>
 
     <div class="contact-info">
-     <strong>Call us 📞 :</strong> <a href="tel:+256782833430">+(256) 782-833-430</a> <br>
-    <strong>Whatsapp <i style="font-size:20px" class="fa">&#xf232;</i> :</strong> <a href="tel:+256782833430">+(256) 701-414-732</a> <br>
-    <strong>Email <i class="fa fa-envelope" aria-hidden="true"></i> :</strong> <a href="mailto:sacredspringsschool@gmail.com">sacredspringsschool@gmail.com</a>
-    <br><strong>Location: <a href="#"> Bajjo - Seeta, Mukono, Uganda </a> </strong>
+        <div><strong><span class="web-only">Call us </span><i class="fa fa-phone-square mobile-only" style='font-size:20px' aria-hidden="true"></i>
+
+:</strong> <a href="tel:+256782833430">+(256) 782-833-430</a> <br></div>
+        <div> 
+            <strong><span class="web-only">Whatsapp</span> <i style="font-size:20px" class="fa mobile-only">&#xf232;</i> :
+            </strong> <a href="tel:+256782833430">+(256) 701-414-732</a> <br>
+        </div>
+        <div>
+            <strong><span class="web-only">Email</span> <i class="fa fa-envelope mobile-only" aria-hidden="true"></i> :</strong> <a href="mailto:sacredspringsschool@gmail.com">sacredspringsschool@gmail.com</a><br>
+        </div>
+        <div>
+            <strong><span class="web-only">Location</span> <i style="font-size:20px" class="fa mobile-only">&#xf041;</i> : <a href="#"> Bajjo - Seeta, Mukono, Uganda </a> </strong>
+        </div>
     </div>
   </div>
 </body>
